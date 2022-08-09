@@ -2,6 +2,6 @@
 
 Simple app zum Biber zählen.
 
-Powered by netlify and next.js.
+Powered by next.js, netlify, lyket, and cloudflare.
 
 All rights reserved.
