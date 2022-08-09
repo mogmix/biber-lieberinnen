@@ -1,3 +1,4 @@
+import { ClapButton, LikeButton, Provider } from "@lyket/react";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -18,16 +19,21 @@ export default function Home() {
         <link rel="icon" href="/images/beaver_icon.png" />
       </Head>
       <main>
-        <p className="bgText">
-          Biber counter!
-          <br />
-          {/* Eine simple app, um Biber-Sichtungen zu zählen */}
-        </p>
+        <p className="bgText">Biber counter!</p>
 
-        {/* <Header title="" />
-        <p className="description">
-        </p>
-        <code>Click</code> */}
+        <Provider apiKey="pt_283efe3b5aa306eee80dfd3c840356">
+          <ClapButton id="biber-counter" namespace="biber-lieberinnen">
+            {({ handlePress, totalClaps, userClaps, isLoading }) => (
+              <>
+                <button onClick={handlePress} disabled={isLoading}>
+                  <img src="/images/beaver_button.jpeg" alt="beaver-button" width="200" />
+                </button>
+                <div>Zähler: {totalClaps}</div>
+                <div>Du hast {userClaps} Biber gezählt!</div>
+              </>
+            )}
+          </ClapButton>
+        </Provider>
       </main>
     </div>
   );
