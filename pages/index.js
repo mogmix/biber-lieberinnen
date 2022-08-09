@@ -1,23 +1,42 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="container">
+      <div className="bgWrap">
+        <Image
+          alt="Beaver"
+          src="/images/beaver.jpg"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      </div>
       <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
+        <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_283efe3b5aa306eee80dfd3c840356"></script>
+        <title>Biber spotting!</title>
+        <link rel="icon" href="/images/beaver_icon.png" />
       </Head>
-
       <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
+        <p className="bgText">
+          Biber counter!
+          <br />
+          {/* Eine simple app, um Biber-Sichtungen zu zählen */}
         </p>
-      </main>
 
-      <Footer />
+        {/* <Header title="" />
+        <p className="description">
+        </p>
+        <code>Click</code> */}
+
+        <div
+          data-lyket-type="like"
+          data-lyket-id="my-third-post"
+          data-lyket-namespace="blog"
+          data-lyket-template="twitter"
+        ></div>
+      </main>
     </div>
-  )
+  );
 }
