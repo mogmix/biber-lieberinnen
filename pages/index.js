@@ -14,7 +14,6 @@ export default function Home() {
         />
       </div>
       <Head>
-        <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_283efe3b5aa306eee80dfd3c840356"></script>
         <title>Biber spotting!</title>
         <link rel="icon" href="/images/beaver_icon.png" />
       </Head>
@@ -29,13 +28,6 @@ export default function Home() {
         <p className="description">
         </p>
         <code>Click</code> */}
-
-        <div
-          data-lyket-type="like"
-          data-lyket-id="my-third-post"
-          data-lyket-namespace="blog"
-          data-lyket-template="twitter"
-        ></div>
       </main>
     </div>
   );
